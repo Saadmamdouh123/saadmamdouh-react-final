@@ -3,8 +3,26 @@ import { Imagess } from "../../constant";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { useState } from "react";
 
 function Home() {
+  
+const banners = [Imagess. banner26,Imagess.banner22,Imagess.banner24]; 
+
+    const getRandomBanners = () => {
+      const randomBanner = Math.floor(Math.random() * banners.length);
+      return banners[randomBanner];
+    };
+  
+    const [Banner, setBunner] = useState('');
+  
+    useEffect(() => {
+      setBunner(getRandomBanners());
+    }, []);
+
+
+
   return (
     <>
       <div className="pt-[100px]">
@@ -139,7 +157,7 @@ function Home() {
         </div>
         <div className="relative">
           <img
-            src={Imagess.banner26}
+            src={Banner}
             className="w-[600px] h-[530px] shadow-md"
             alt=""
           />
