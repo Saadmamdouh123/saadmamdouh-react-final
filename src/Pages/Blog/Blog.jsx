@@ -1,7 +1,10 @@
 import React from "react";
 import { Imagess } from "../../constant";
+import { useNavigate } from "react-router-dom";
 
 export const Blog = () => {
+    const navigate = useNavigate()
+
   return (
     <>
       <div className="pt-[100px] relative flex justify-center items-center">

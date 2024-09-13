@@ -2,26 +2,25 @@ import Carousel from "./Carousel";
 import { Imagess } from "../../constant";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
 
 function Home() {
-  
-const banners = [Imagess. banner26,Imagess.banner22,Imagess.banner24]; 
+  const banners = [Imagess.banner26, Imagess.banner22, Imagess.banner24];
 
-    const getRandomBanners = () => {
-      const randomBanner = Math.floor(Math.random() * banners.length);
-      return banners[randomBanner];
-    };
-  
-    const [Banner, setBunner] = useState('');
-  
-    useEffect(() => {
-      setBunner(getRandomBanners());
-    }, []);
+  const getRandomBanners = () => {
+    const randomBanner = Math.floor(Math.random() * banners.length);
+    return banners[randomBanner];
+  };
 
+  const [Banner, setBunner] = useState("");
 
+  useEffect(() => {
+    setBunner(getRandomBanners());
+  }, []);
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -45,8 +44,12 @@ const banners = [Imagess. banner26,Imagess.banner22,Imagess.banner24];
           </div>
         </div>
         <div className="w-[50vw] flex flex-col gap-6 justify-center items-center">
-          <div className="relative">
-            <img src={Imagess.Magana} className="w-[20vw] h-[40vh]" alt="" />
+          <div className="relative overflow-hidden">
+            <img
+              src={Imagess.Magana}
+              className="w-[20vw] h-[40vh] hover:scale-110 transition-transform duration-500 ease-in-out"
+              alt=""
+            />
             <button className="absolute right-12 left-24 bottom-6 bg-white text-black w-28 h-10 shadow-md rounded-lg hover:bg-red-400 hover:text-white">
               Shop Now
             </button>
@@ -156,11 +159,7 @@ const banners = [Imagess. banner26,Imagess.banner22,Imagess.banner24];
           </div>
         </div>
         <div className="relative">
-          <img
-            src={Banner}
-            className="w-[600px] h-[530px] shadow-md"
-            alt=""
-          />
+          <img src={Banner} className="w-[600px] h-[530px] shadow-md" alt="" />
           <div className="absolute top-[300px] left-[170px]">
             <h1 className="text-center text-black text-xl">
               Boxy2 T-Shirt with Roll Sleeve
@@ -230,15 +229,23 @@ const banners = [Imagess. banner26,Imagess.banner22,Imagess.banner24];
       </section>
 
       <section className="p-9">
-        <h1 className="text-center py-4 text-2xl font-semibold">@ FOLLOW US ON INSTAGRAM</h1>
+        <h1 className="text-center py-4 text-2xl font-semibold">
+          @ FOLLOW US ON INSTAGRAM
+        </h1>
         <div className="flex justify-around items-center p-8">
           <div className="text-center">
-            <h1 className="text-xl font-semibold py-1">Free Delivery Worldwide</h1>
-            <p className="text-gray-500">Mirum est notare quam littera gothica</p>
+            <h1 className="text-xl font-semibold py-1">
+              Free Delivery Worldwide
+            </h1>
+            <p className="text-gray-500">
+              Mirum est notare quam littera gothica
+            </p>
           </div>
           <div className="text-center border-r-2 border-gray-300 border-l-2 border-gray-300 p-6 py-6">
             <h1 className="text-xl font-semibold py-1">30 Days Return</h1>
-            <p className="text-gray-500">Simply return it within 30 days for an exchange.</p>
+            <p className="text-gray-500">
+              Simply return it within 30 days for an exchange.
+            </p>
           </div>
           <div className="text-center">
             <h1 className="text-xl font-semibold py-1">Store Opening</h1>
@@ -246,6 +253,7 @@ const banners = [Imagess. banner26,Imagess.banner22,Imagess.banner24];
           </div>
         </div>
       </section>
+
     </>
   );
 }

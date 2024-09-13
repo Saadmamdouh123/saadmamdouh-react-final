@@ -13,9 +13,24 @@ function Contact() {
       </div>
 
       <div className="p-10 flex gap-12 justify-center items-center">
-        <div>
-            <img src={Imagess.map} className="w-[600px] h-[500px]" alt="" />
+      <div className="max-w-full overflow-hidden w-[500px] h-[500px]">
+        <div className="h-full w-full">
+          <iframe
+            className="h-full w-full border-0"
+            frameBorder="0"
+            src="https://www.google.com/maps/embed/v1/place?q=casa&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+            title="Google Map"
+          ></iframe>
         </div>
+        <a
+          className="block mt-4 text-blue-500 hover:underline"
+          rel="nofollow"
+          href="https://www.bootstrapskins.com/themes"
+          id="grab-map-authorization"
+        >
+          premium bootstrap themes
+        </a>
+      </div>
         <div>
             <h1 className="pb-8 text-2xl font-semibold">Send us your message</h1>
             <div className="flex flex-col gap-6 mt-7">

@@ -7,8 +7,8 @@ import Shop from "./Shop/Shop";
 import { Blog } from "./Blog/Blog";
 import Carousel from "./Home/Carousel";
 import { Footer } from "../layout/Footer";
-
-
+import { Login } from "./login/login";
+import { Loginn } from "./login/loginn";
 function HomeBig() {
     return (
         <>
@@ -20,6 +20,8 @@ function HomeBig() {
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/shop" element={<Shop />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/Loginn" element={<Loginn />}/>
             </Routes>
             <Footer/>
         </>
