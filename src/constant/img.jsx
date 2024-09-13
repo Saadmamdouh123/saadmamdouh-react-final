@@ -33,4 +33,5 @@ export default{
     ndarder:require("../assets/images/ndader.webp"),
     firstgirl:require("../assets/images/firstgirl.png"),
     secondgirl:require("../assets/images/secondgirl.png"),
+    map:require("../assets/images/Capture d'écran 2024-09-13 155500.png"),
 }
