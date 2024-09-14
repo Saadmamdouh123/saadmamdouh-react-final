@@ -9,6 +9,7 @@ import Carousel from "./Home/Carousel";
 import { Footer } from "../layout/Footer";
 import { Login } from "./login/login";
 import { Loginn } from "./login/loginn";
+import { ProductDetail } from "./Product Page/ProductDetail";
 function HomeBig() {
     return (
         <>
@@ -22,6 +23,7 @@ function HomeBig() {
                 <Route path="/shop" element={<Shop />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/Loginn" element={<Loginn />}/>
+                <Route path="/ProductDetail" element={<ProductDetail />}/>
             </Routes>
             <Footer/>
         </>

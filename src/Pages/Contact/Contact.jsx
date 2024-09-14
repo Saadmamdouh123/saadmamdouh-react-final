@@ -1,7 +1,10 @@
 import { Imagess } from "../../constant";
+import { useState } from "react";
 
 function Contact() {
+    
   return (
+
     <>
       <div className="pt-[100px] relative flex justify-center items-center">
         <img className="h-[30vh]" src={Imagess.banner4} alt="" />
@@ -43,6 +46,9 @@ function Contact() {
             </div>
         </div>
       </div>
+
+
+      
     </>
   );
 }

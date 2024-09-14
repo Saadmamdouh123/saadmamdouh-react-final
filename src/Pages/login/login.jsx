@@ -31,8 +31,10 @@ export const Login = () => {
           <p className="pb-2">Password:</p>
           <input type="text" placeholder="Password"  className="border border-gray-300 p-1 w-[400px] h-12 pb-2"/> <br />
           <p className="pb-4">Forgot your password?</p>
-          <button className="bg-black text-white p-3">Continue</button>
-
+          <div className="flex gap-4">
+                <button className="bg-black text-white p-3">Continue</button>
+               <button className="border border-gray-400 text-black p-3" onClick={()=>{navigate("/")}}>Return to Store</button>
+          </div>
         </div>
        
       </div>
