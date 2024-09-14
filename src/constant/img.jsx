@@ -34,4 +34,5 @@ export default{
     firstgirl:require("../assets/images/firstgirl.png"),
     secondgirl:require("../assets/images/secondgirl.png"),
     map:require("../assets/images/Capture d'écran 2024-09-13 155500.png"),
+    Thirdgirl:require("../assets/images/Thirdgirl.png"),
 }
